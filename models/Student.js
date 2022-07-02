@@ -4,7 +4,7 @@ import mongoose from "mongoose";
 const studentSchema = new mongoose.Schema({
     name: {type:String, required:true, trim:true},
                                         // trim - if someone put space then it will get trimmed. 
-    age: {type:Number, required:true, min:18, max:60},
+    age: {type:Number, required:true, min:8, max:30},
     fees: {type:mongoose.Decimal128, required:true, validate:(value)=> value >= 4000.50 }
                                                     // Custom Validation
 })
